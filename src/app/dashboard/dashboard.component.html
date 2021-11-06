@@ -1,4 +1,14 @@
-<h3>Login Successful. Welcome to the Dashboard</h3>
+<h3>Login Successful. Welcome to the Dashboard. The response of the Http call is:</h3>
+<h2 class="error">{{postError}}</h2>
+<ul *ngIf="this.cont">
+	<li>{{recipeCountType}}</li>
+	<li>{{innovateCountType}}</li>
+	<li>{{taskCountType}}</li>
+	<li>{{recipeHeader}}</li>
+	<li>{{innovate}}</li>
+	<li>{{task}}</li>
+</ul>
+
 <div class="logout-container">
 	<button mdbBtn color="default" (click)="onLogOut()" id="logout" class="m-0 px-3 py-2" mdbWavesEffect>Logout</button>
 </div>

@@ -1,6 +1,6 @@
 h3 {
 	color: green;
-	margin: 100px;
+	margin: 0px 100px 0;
 	font-size: 55px;
 }
 #logout {
@@ -12,4 +12,11 @@ h3 {
 	min-width: 100px;
 	line-height: 36px;
 	padding: 0 16px;
+}
+
+li {
+	padding: 15px;
+}
+h2 {
+	padding: 20px;
 }

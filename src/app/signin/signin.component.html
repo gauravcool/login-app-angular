@@ -1,12 +1,12 @@
-<div class="signin-form">
+<div class="signin-form" *ngIf="!this.getResponse">
 	<h2 class="head">PLEASE SIGN IN</h2>
 
-	<form [formGroup]="signinForm" (ngSubmit)="onSignin()">
+	<form [formGroup]="signinForm" (ngSubmit)="onSignin()"> <!-- property binding [] 			event binding () -->
 		<div class="md-form">
 		    <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
 		    <input mdbInput mdbValidate formControlName="email" minLength="8" maxLength="25" type="email"
 		           class="form-control" id="form9">
-		    <label for="form9">Email of User </label>
+		    <label for="form9">Username </label>
 		    <mdb-error *ngIf="formControl.email.invalid && (formControl.email.dirty || formControl.email.touched)">Email invalid</mdb-error>
 		    <mdb-success *ngIf="formControl.email.valid && (formControl.email.dirty || formControl.email.touched)">Email valid</mdb-success>
 		</div>
@@ -15,7 +15,7 @@
 		    <input mdbInput mdbValidate formControlName="password" minLength="10" maxLength="25" type="password"
 		           class="form-control" id="form10">
 		    <label for="form10">Type your password</label>
-		    <mdb-error *ngIf="formControl.password.invalid && (formControl.password.dirty || formControl.password.touched)">Password invalid
+		    <mdb-error *ngIf="formControl.password.invalid && (formControl.password.dirty || formControl.password.touched)">Invalid Password
 		    </mdb-error>
 		    <mdb-success *ngIf="formControl.password.valid && (formControl.password.dirty || formControl.password.touched)">Password valid
 		    </mdb-success>

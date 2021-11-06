@@ -3,6 +3,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 
+import { SigninService } from './services/signin.service';
+import { HttpClientModule } from '@angular/common/http';
+
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from './header/header.component';
@@ -28,7 +31,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
         path: '',
         component: SigninComponent
       }
-    ])
+    ]),
+    HttpClientModule
   ],
   declarations: [
     AppComponent, 
@@ -36,6 +40,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     SigninComponent, 
     DashboardComponent, LogoutComponent
   ],
+  providers: [SigninService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
